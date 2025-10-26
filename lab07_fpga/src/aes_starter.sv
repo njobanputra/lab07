@@ -80,6 +80,7 @@ module aes_core(input  logic         clk,
                 output logic [127:0] cyphertext);
 
     // TODO: Your code goes here
+    // look at your notes, and write this up by tomorrow's clinic meeting.
     
 endmodule
 
