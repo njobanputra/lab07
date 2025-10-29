@@ -80,7 +80,11 @@ module aes_core(input  logic         clk,
                 output logic [127:0] cyphertext);
 
     // TODO: Your code goes here
-    // look at your notes, and write this up by tomorrow's clinic meeting.
+	logic [127:0] subtext, rowstext, mixtext;
+	
+	subBytes subBytes(clk, plaintext, subtext);
+	shiftRows shiftRows(subtext, rowstext);
+	mixcolumns mixCol(rowstext, mixtext);
     
 endmodule
 
